@@ -5,5 +5,26 @@
     "title": "Exercises for the Big Data lecture",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "get_started.html",
+    "href": "get_started.html",
+    "title": "Getting started",
+    "section": "",
+    "text": "Below you can see R running in the browser. It is not as powerful as if we install R on the machine, but it spares us the hassle of setting R up on every of your Computers. You can type some simple math to try it out! You can run single lines by pressing Ctrl + Enter."
+  },
+  {
+    "objectID": "get_started.html#your-personal-r-environment",
+    "href": "get_started.html#your-personal-r-environment",
+    "title": "Getting started",
+    "section": "",
+    "text": "Below you can see R running in the browser. It is not as powerful as if we install R on the machine, but it spares us the hassle of setting R up on every of your Computers. You can type some simple math to try it out! You can run single lines by pressing Ctrl + Enter."
+  },
+  {
+    "objectID": "get_started.html#loading-libraries",
+    "href": "get_started.html#loading-libraries",
+    "title": "Getting started",
+    "section": "loading libraries",
+    "text": "loading libraries\nAs most open source software, R builds upon loading libraries. Usually those are found on CRAN, but in our case they need to be provided. Let’s try loading libraries!\n\n\n\n\n\n\n\n\nHere we have loaded the dplyr package, which is used for data manipulation. It is part of the much bigger tidyverse. Since the packages always have to be installed, we will not use the more extensive command library(tidyverse). This would trigger to install a lot of packages. If you want to do this on your own machine, please do so"
   }
 ]

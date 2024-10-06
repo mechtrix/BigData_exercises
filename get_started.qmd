@@ -2,11 +2,14 @@
 title: "Getting started"
 format: live-html
 engine: knitr
+webr:
+  packages:
+    - dplyr
 ---
 
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
-## Your personal R environment
+# Your personal R environment
 
 Below you can see R running in the browser. 
 It is not as powerful as if we install R on the machine, but it spares us the hassle of setting R up on every of your Computers.
@@ -17,7 +20,7 @@ You can run single lines by pressing `Ctrl` + `Enter`.
 1+1
 ```
 
-## loading libraries
+# loading libraries
 
 As most open source software, R builds upon loading libraries. 
 Usually those are found on [CRAN](https://cran.r-project.org/), but in our case they need to be provided.

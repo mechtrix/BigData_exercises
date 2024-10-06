@@ -1,0 +1,26 @@
+---
+title: "Data Sources"
+format: live-html
+engine: knitr
+webr:
+  packages:
+    - dplyr
+    - jsonlite
+    - ggplot2
+    - duckdb
+    - dbplyr
+    - janitor
+    - rvest
+    - readr
+  resources:
+    - https://coatless.github.io/raw-data/flights.csv','flights.csv
+    - https://raw.githubusercontent.com/mechtrix/data/main/raw_data/mtcars.duckdb
+    - https://raw.githubusercontent.com/mechtrix/data/refs/heads/main/raw_data/f1_drivers_wiki_page.html
+---
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+```{webr}
+for (x in 1:5) {
+  print(x ** 2)
+}
+```

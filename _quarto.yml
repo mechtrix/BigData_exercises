@@ -10,6 +10,7 @@ website:
         text: Home
       - about.qmd
       - get_started.qmd
+      - data_sources.qmd
 
 format:
   html:

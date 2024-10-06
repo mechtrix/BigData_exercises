@@ -4,12 +4,6 @@ project:
 
 website:
   title: "Exercises for the Big Data lecture"
-  # navbar:
-  #   left:
-  #     - href: index.qmd
-  #       text: Home
-  #     - get_started.qmd
-  #     - data_sources.qmd
   sidebar: 
     style: "floating"
     search: true
@@ -21,6 +15,14 @@ website:
         contents: 
           - text: "data shipped with R"
             href: provided_data.qmd
+          - text: "using csv files"
+            href: csv_files.qmd
+          - text: "using API's"
+            href: API_data.qmd
+          - text: "using databases"
+            href: databases.qmd
+          - text: "web scraping"
+            href: web_scraping.qmd
   page-footer: "Copyright 2024, Prof. Dr. Tim Weber" 
 
 format:

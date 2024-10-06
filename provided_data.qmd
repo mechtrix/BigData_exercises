@@ -1,5 +1,6 @@
 ---
 title: "data shipped with R"
+bibliography: https://api.citedrive.com/bib/d9c91a98-2836-4c6f-989d-083b698b046c/references.bib?x=eyJpZCI6ICJkOWM5MWE5OC0yODM2LTRjNmYtOTg5ZC0wODNiNjk4YjA0NmMiLCAidXNlciI6ICI1NjQ5IiwgInNpZ25hdHVyZSI6ICIzNGZhNzEzZTAxMWNkYzZkODk1N2YzYjUzMTJlM2Y2YmQ4YmI3ZDRlZmE1YmFhMzIxYTFiNzY0ZDRkOGVlNjRhIn0=
 format: live-html
 engine: knitr
 webr:
@@ -51,4 +52,66 @@ dplyr::glimpse(Titanic)
 str(Titanic)
 ```
 
+Ok, so now we know something about the data, but what does it all mean?
+Luckily, with in-built datasets, there usually comes a pretty good documentation, which we can call using the `?`.
+
+```{webr}
+?Titanic
+```
+
+## conversion to data frame
+
+You can see, that the data is stored in a table.
+This is a format, that has been around for a while and it is perfectly fine to work with, however often it is more convenient to use a `dataframe`.
+
+A data frame is a table or a two-dimensional array-like structure in which each column contains values of one variable and each row contains one set of values from each column.
+
++ The column names should be non-empty.
++ The row names should be unique.
++ The data stored in a data frame can be of numeric, factor or character type.
++ Each column should contain same number of data items.
+
+`dataframe`s also should be *tidy*[@tidy-data].
+But what is a tidy `dataframe`?
+There is a long philosophical debate, that is interesting to follow, but hold only little practical value. 
+The ground rule for tidy data is:
+
+::: {.callout-important}
+Each column is a variable, each observation is a row.
+:::
+
+This means, that sometimes data is repeated for the sake of clarity.
+For everyone who is new to this concept, this first sounds over the top, but once you get used to it, you will never want to look at data any other way.
+
+This is also where the name [*tidyverse*](https://www.tidyverse.org/) comes from.
+Once you stick to that fundamental design philosophy, the functions in the tidyverse are very simple to use.
+
+Back to the conversion, so ... how?
+
+```{webr}
+Titanic_df <- as.data.frame(Titanic)
+
+print(Titanic_df)
+
+```
+
+You can see above the principle of tidy data.
+
+Now, the `glimpse()` command also give a different result.
+
+```{webr}
+
+glimpse(Titanic_df)
+
+```
+
+You can also play around with the `summary()` function on the Titanic `table` or the Titanic `dataframe`.
+
+```{webr}
+
+summary(Titanic)
+
+summary(Titanic_df)
+
+```
 

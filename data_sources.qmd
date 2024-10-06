@@ -14,8 +14,6 @@ webr:
     - janitor
     - rvest
     - readr
-  resources:
-    - data/foodbank
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 

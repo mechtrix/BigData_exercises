@@ -3,19 +3,16 @@ title: "Exercises for the Big Data lecture"
 ---
 
 This is the landing page for the Big Data exercises tough by Prof. Dr. Tim Weber at the [DIT](https://www.th-deg.de/en/campus-cham).
-
 This is a more or less static page, for admin stuff got to [ilearn](https://ilearn.th-deg.de/).
-
 The exercises are designed to run in the browser of your choice.
-
 Feel free to setup `R` on your local machine, but do not expect support from us.
-
 You can download `R` [here](https://cran.r-project.org/).
-
 You can download `RStudio` (the free IDE for `R`) [here](https://posit.co/download/rstudio-desktop/).
-
 If you want to get things going, start [here](https://r4ds.hadley.nz/).
-
 Packages for`R` can be downloaded from [CRAN](https://cran.r-project.org/), but this should be done from within `R`.
-
 If you want to contribute or get packages that are not hosted on CRAN, you can setup a [Github account](https://github.com/), but this is purely optional.
+
+* [Get started](get_started.qmd)
+* [Data sources](data_sources.qmd)
+
+![openAI prompt: give me a picture about Big Data](img/BigData.png)

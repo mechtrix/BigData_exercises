@@ -11,17 +11,21 @@ website:
   #     - get_started.qmd
   #     - data_sources.qmd
   sidebar: 
-    style: "docked"
+    style: "floating"
     search: true
     contents: 
       - text: "Get started"
         href: get_started.qmd
-      - text: "Data Sources"
+      - section: "Data Sources"
         href: data_sources.qmd
+        contents: 
+          - text: "data shipped with R"
+            href: provided_data.qmd
+  page-footer: "Copyright 2024, Prof. Dr. Tim Weber" 
 
 format:
   html:
-    theme: cosmo
+    theme: sandstone
     css: styles.css
     toc: true
 

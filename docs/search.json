@@ -1,10 +1,35 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Exercises for the Big Data lecture",
+    "objectID": "provided_data.html",
+    "href": "provided_data.html",
+    "title": "Data Sources",
     "section": "",
-    "text": "This is the landing page for the Big Data exercises tough by Prof. Dr. Tim Weber at the DIT.\nThis is a more or less static page, for admin stuff got to ilearn.\nThe exercises are designed to run in the browser of your choice.\nFeel free to setup R on your local machine, but do not expect support from us.\nYou can download R here.\nYou can download RStudio (the free IDE for R) here.\nIf you want to get things going start here.\nPackages forR can be downloaded from CRAN, but this should be done from within R.\nIf you want to contribute, you can setup a Github account, but this is purely optional."
+    "text": "You can simply use data that is natively provided by R. A famous example is the titanic data set. Do this using the data() command as provided below\n\n\n\n\n\n\n\n\nThere is not a lot that happened, because we do not use an IDE. An IDE like RStudio would acutally display the variables. This is a trade-off we have to live with the convinienct of not setting up R, but of course, there are ways around it. Below are a couple of ways to display data: - the printcommand is the most verbose way to output data - the head command prints only the first couple of lines (can be specified using head(object, n = X) - the glimpse command is very convenient, but needs the dplyr package to be loaded or referenced (with :: as shown below) - the str command give the structure of the object, so it provides a meta view of the variable. This is convenient if you have some unexpected output.",
+    "crumbs": [
+      "Data Sources",
+      "data shipped with R"
+    ]
+  },
+  {
+    "objectID": "provided_data.html#data-provided-by-r",
+    "href": "provided_data.html#data-provided-by-r",
+    "title": "Data Sources",
+    "section": "",
+    "text": "You can simply use data that is natively provided by R. A famous example is the titanic data set. Do this using the data() command as provided below\n\n\n\n\n\n\n\n\nThere is not a lot that happened, because we do not use an IDE. An IDE like RStudio would acutally display the variables. This is a trade-off we have to live with the convinienct of not setting up R, but of course, there are ways around it. Below are a couple of ways to display data: - the printcommand is the most verbose way to output data - the head command prints only the first couple of lines (can be specified using head(object, n = X) - the glimpse command is very convenient, but needs the dplyr package to be loaded or referenced (with :: as shown below) - the str command give the structure of the object, so it provides a meta view of the variable. This is convenient if you have some unexpected output.",
+    "crumbs": [
+      "Data Sources",
+      "data shipped with R"
+    ]
+  },
+  {
+    "objectID": "get_started.html",
+    "href": "get_started.html",
+    "title": "Getting started",
+    "section": "",
+    "text": "Your personal R environment\nBelow you can see R running in the browser. It is not as powerful as if we install R on the machine, but it spares us the hassle of setting R up on every of your Computers. You can type some simple math to try it out! You can run single lines by pressing Ctrl + Enter.\n\n\n\n\n\n\n\n\n\n\nloading libraries\nAs most open source software, R builds upon loading libraries. Usually those are found on CRAN, but in our case they need to be provided. Let’s try loading libraries!\n\n\n\n\n\n\n\n\nHere we have loaded the dplyr package, which is used for data manipulation. It is part of the much bigger tidyverse. Since the packages always have to be installed, we will not use the more extensive command library(tidyverse). This would trigger to install a lot of packages. If you want to do this on your own machine, please do so",
+    "crumbs": [
+      "Get started"
+    ]
   },
   {
     "objectID": "data_sources.html",
@@ -12,16 +37,6 @@
     "title": "Data Sources",
     "section": "",
     "text": "For BigData we need - Data. There are many sources out there, we will start working with a couple of them.",
-    "crumbs": [
-      "Data Sources"
-    ]
-  },
-  {
-    "objectID": "data_sources.html#data-provided-by-r",
-    "href": "data_sources.html#data-provided-by-r",
-    "title": "Data Sources",
-    "section": "data provided by R",
-    "text": "data provided by R\nYou can simply use data that is natively provided by R. A famous example is the titanic data set. Do this using the data() command as provided below\n\n\n\n\n\n\n\n\nThere is not a lot that happened, because we do not use an IDE. An IDE like RStudio would acutally display the variables. This is a trade-off we have to live with the convinienct of not setting up R, but of course, there are ways around it. Below are a couple of ways to display data: - the printcommand is the most verbose way to output data - the head command prints only the first couple of lines (can be specified using head(object, n = X) - the glimpse command is very convenient, but needs the dplyr package to be loaded or referenced (with :: as shown below) - the str command give the structure of the object, so it provides a meta view of the variable. This is convenient if you have some unexpected output.",
     "crumbs": [
       "Data Sources"
     ]
@@ -67,13 +82,10 @@
     ]
   },
   {
-    "objectID": "get_started.html",
-    "href": "get_started.html",
-    "title": "Getting started",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Exercises for the Big Data lecture",
     "section": "",
-    "text": "Your personal R environment\nBelow you can see R running in the browser. It is not as powerful as if we install R on the machine, but it spares us the hassle of setting R up on every of your Computers. You can type some simple math to try it out! You can run single lines by pressing Ctrl + Enter.\n\n\n\n\n\n\n\n\n\n\nloading libraries\nAs most open source software, R builds upon loading libraries. Usually those are found on CRAN, but in our case they need to be provided. Let’s try loading libraries!\n\n\n\n\n\n\n\n\nHere we have loaded the dplyr package, which is used for data manipulation. It is part of the much bigger tidyverse. Since the packages always have to be installed, we will not use the more extensive command library(tidyverse). This would trigger to install a lot of packages. If you want to do this on your own machine, please do so",
-    "crumbs": [
-      "Get started"
-    ]
+    "text": "This is the landing page for the Big Data exercises tough by Prof. Dr. Tim Weber at the DIT.\nThis is a more or less static page, for admin stuff got to ilearn.\nThe exercises are designed to run in the browser of your choice.\nFeel free to setup R on your local machine, but do not expect support from us.\nYou can download R here.\nYou can download RStudio (the free IDE for R) here.\nIf you want to get things going, start here.\nPackages forR can be downloaded from CRAN, but this should be done from within R.\nIf you want to contribute or get packages that are not hosted on CRAN, you can setup a Github account, but this is purely optional."
   }
 ]

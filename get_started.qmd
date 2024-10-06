@@ -3,8 +3,6 @@ title: "Getting started"
 format: live-html
 engine: knitr
 webr:
-  packages:
-    - dplyr
 ---
 
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
@@ -19,6 +17,43 @@ You can run single lines by pressing `Ctrl` + `Enter`.
 ```{webr}
 1+1
 ```
+
+# exploring objects
+
+You can assign values to all kind of object names.
+There are certain restrictions, for example an object name can not start with a number.
+One weird thing in `R` is, that is uses the arrow operator (`<-`) for assignments and not the equal sign (`=`).
+The `=` is used to set an argument value.
+It's all about Environments and Workspace, but it is also a little confusing.
+While it does not matter out in the wild that much, it is sometimes important and keeps things clear.
+You may come to love it someday.
+
+Below, we are assigning the value `1` to an object `a`.
+
+```{webr}
+a <- 1
+```
+
+Not very impressive is it?
+You do not see anything, and that is ok.
+`R` does not on default print anything, but we can of course explore the object.
+
+```{webr}
+print(a)
+```
+
+If we assign a value to a new object, we can also print this, but what if we forgot the objects we have assigend?
+In an IDE we would have a viewer that shows the objects, but we do not have this in webR - a small trade-off that comes with you being able to use this in the browser.
+But we can use the `ls()` command to show all objects in the workspace (Linux users may find this familiar)
+
+```{webr}
+b <- 2
+
+ls()
+
+```
+
+
 
 # loading libraries
 
@@ -35,3 +70,23 @@ It is part of the much bigger [tidyverse](https://www.tidyverse.org/).
 Since the packages always have to be installed, we will not use the more extensive command `library(tidyverse)`.
 This would trigger to install a lot of packages.
 If you want to do this on your own machine, please do so
+
+# The Virtual File System (VFS)
+
+We can explore the VFS a little by using the `getwd()` and the `list.files()` command.
+There you can see the `flights.csv` file that we read in before!
+
+
+```{webr}
+getwd()
+
+list.files()
+```
+
+Below we can output the structure of the complete VFS - but watch out, it is a lengthy command.
+When you output the complete VFS - what do you notice?
+
+```{webr}
+list.files('/', full = TRUE, recursive = TRUE)
+
+```

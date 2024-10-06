@@ -5,4 +5,8 @@ title: "Data Sources"
 For BigData we need - Data.
 There are many sources out there, we will start working with a couple of them.
 
-
+* [First, we will look into data that is shipped with R.](provided_data.qmd)
+* [Then, we will check out how to work with `csv` files.](csv_files.qmd)
+* [After this, we will work on the mechanics of API calls.](API_data.qmd)
+* [A quick introduction in working with databases is then given.](databases.qmd)
+* [Also, we will have a short intro into web scraping](web_scraping.qmd)

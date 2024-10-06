@@ -8,9 +8,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
       - get_started.qmd
       - data_sources.qmd
+  sidebar: 
+    style: "docked"
+    search: true
+    contents: 
+      - text: "Get started"
+        href: get_started.qmd
+      - text: "Data Sources"
+        href: data_sources.qmd
 
 format:
   html:

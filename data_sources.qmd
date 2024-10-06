@@ -144,11 +144,7 @@ For this we will download the data that is provided by the API as a csv and re-r
 ```{webr-r}
 library(jsonlite)
 
-data_url <- "https://raw.githubusercontent.com/mechtrix/data/main/raw_data/foodbank"
-
-download.file(data_url, "foodbank")
-
-foodbankRAW <- readLines("foodbank")
+foodbankRAW <- readLines("data/foodbank")
 
 foodbankJSON <- jsonlite::fromJSON(foodbankRAW)
 
@@ -195,7 +191,7 @@ We also use [dbplyr](https://dbplyr.tidyverse.org/) which is a database backend 
 library(duckdb)
 library(dbplyr)
 
-ddb_con <- dbConnect(duckdb(), dbdir = "mtcars.duckdb", read_only = FALSE)
+ddb_con <- dbConnect(duckdb(), dbdir = "data/mtcars.duckdb", read_only = FALSE)
 
 mtcars <- tbl(ddb_con,"mtcars_table") |> collect()
 

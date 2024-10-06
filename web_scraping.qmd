@@ -1,5 +1,5 @@
 ---
-title: "Web Scraping"
+title: "Web scraping"
 format: live-html
 engine: knitr
 resources: 
@@ -15,6 +15,8 @@ webr:
       - data/f1_drivers_wiki_page.html
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+# loading data
 
 In this example we will scrape the F1 driver data from wikipedia, that is online [here](https://en.wikipedia.org/wiki/List_of_Formula_One_drivers).
 The large table contains a lot of data that we want to download.
@@ -52,9 +54,12 @@ You should see something like this.
 The table is in an table element with the sortable attribute.
 The `rvest` package allow for functions that are prepared for this, so we just need to convert the raw page.
 You may have notices the `clean_names()` function.
+
+# cleaning data
+
 This comes from the [janitor](https://github.com/sfirke/janitor) package, which contains very useful functions for data cleaning.
 It has been uploaded to your webR already, but check out the github link.
-Try to alter the code to see the effect of the packagel, you have all the tools available.
+Try to alter the code to see the effect of the package, you have all the tools available.
 
 ```{webr-r}
 
@@ -148,6 +153,8 @@ drivers_F1 <- drivers_F1 |>
 
 ```
 
+# processing data
+
 So, what now?
 We can look into how many championships by nation have been won.
 For this, we first `group_by()` nation, and then we `summarise()` the sum of all `drivers_championships`.
@@ -201,6 +208,8 @@ championships_by_driver <- drivers_F1 %>%
   arrange(desc(championship_wins))
 
 ```
+
+# plotting data
 
 Next thing we want to know is, if there is a relationship between number of `pole_positions` and the number of championships that have been won by a driver (`drivers_championsips`).
 

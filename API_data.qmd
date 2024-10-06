@@ -1,5 +1,5 @@
 ---
-title: "Data Sources"
+title: "Calling API's"
 format: live-html
 engine: knitr
 resources: 
@@ -15,7 +15,7 @@ webr:
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
-## API
+# loading data
 
 Below you can try to get data from an API.
 This is not yet possible using webR for technical and security reasons. 
@@ -72,6 +72,8 @@ dplyr::glimpse(foodbankJSON)
 
 ```
 
+# processing data
+
 Ok, so now we have data, but what can we do with it?
 Below is some code where we count the foodbanks according to region in the UK.
 
@@ -79,6 +81,8 @@ Below is some code where we count the foodbanks according to region in the UK.
 cnt_foodbank <- foodbankJSON |> 
   count(country)
 ```
+
+# plotting data
 
 We then add a ordered barplot so show the counts.
 Piece o' cake!

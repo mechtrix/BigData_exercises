@@ -1,5 +1,5 @@
 ---
-title: "Data Sources"
+title: "data shipped with R"
 format: live-html
 engine: knitr
 webr:
@@ -9,7 +9,7 @@ webr:
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
-## data provided by R
+# loading data
 
 You can simply use data that is natively provided by R.
 A famous example is the titanic data set.
@@ -29,6 +29,8 @@ Below are a couple of ways to display data:
 - the `head` command prints only the first couple of lines (can be specified using `head(object, n = X`)
 - the `glimpse` command is very convenient, but needs the `dplyr` package to be loaded or referenced (with `::` as shown below)
 - the `str` command give the structure of the object, so it provides a meta view of the variable. This is convenient if you have some unexpected output.
+
+# inspecting data
 
 ```{webr}
 print(Titanic)

@@ -15,13 +15,13 @@ website:
         contents: 
           - text: "data shipped with R"
             href: provided_data.qmd
-          - text: "using csv files"
+          - text: "csv files"
             href: csv_files.qmd
-          - text: "using API's"
+          - text: "Calling API's"
             href: API_data.qmd
-          - text: "using databases"
+          - text: "Databases"
             href: databases.qmd
-          - text: "web scraping"
+          - text: "Web scraping"
             href: web_scraping.qmd
   page-footer: "Copyright 2024, Prof. Dr. Tim Weber" 
 

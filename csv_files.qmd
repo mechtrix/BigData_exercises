@@ -14,15 +14,21 @@ webr:
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
+# loading data
+
 Reading a csv is fairly simple, we just need the file path.
 Lucky for you this has been prepared, the file was already downloaded to the Virtual File System (VFS) that webR uses.
 Classically, we can use the `read.csv()` function from baseR.
 It is not as convenient, but you do not need to install or download any package to work with it.
 Check out the variable content using the commands above!
 
+## Base R
+
 ```{webr}
 flights_data_base <-  read.csv("data/flights.csv")
 ```
+
+## dplyr
 
 In the `tidyverse` we also have the [readr](https://readr.tidyverse.org/) package. 
 It give more flexibility, for example specifiying columns.

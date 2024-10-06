@@ -1,5 +1,5 @@
 ---
-title: "Data Sources"
+title: "Databases"
 format: live-html
 engine: knitr
 resources: 
@@ -14,7 +14,7 @@ webr:
 
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
-## Databases
+# loading data
 
 As with API's a *real* connection to a remote database is right now not feasible using webR.
 But we can use *duckDB* which is a fast in-process analytical database.
@@ -30,6 +30,8 @@ ddb_con <- dbConnect(duckdb(), dbdir = "data/mtcars.duckdb", read_only = FALSE)
 mtcars <- tbl(ddb_con,"mtcars_table") |> collect()
 
 ```
+
+# plotting data
 
 So did it work? 
 You can query the object using the same commands as described above.

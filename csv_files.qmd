@@ -1,5 +1,5 @@
 ---
-title: "Data Sources"
+title: "csv files"
 format: live-html
 engine: knitr
 resources: 
@@ -9,10 +9,10 @@ webr:
       - dplyr
       - ggplot2
       - readr
+    resources:
+      - data/flights.csv
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
-
-## csv
 
 Reading a csv is fairly simple, we just need the file path.
 Lucky for you this has been prepared, the file was already downloaded to the Virtual File System (VFS) that webR uses.
@@ -34,16 +34,5 @@ flights_data_readr <-  read_csv("data/flights.csv")
 
 ```
 
-But we can also explore the VFS a little by using the `getwd()` and the `list.files()` command.
-There you can see the `flights.csv` file that we read in before!
-When you output the complete VFS - what do you notice?
 
-```{webr}
-getwd()
-
-list.files()
-
-list.files('/', full = TRUE, recursive = TRUE)
-
-```
 

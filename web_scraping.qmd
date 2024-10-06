@@ -1,5 +1,5 @@
 ---
-title: "Data Sources"
+title: "Web Scraping"
 format: live-html
 engine: knitr
 resources: 
@@ -11,10 +11,10 @@ webr:
       - janitor
       - rvest
       - readr
+    resources:
+      - data/f1_drivers_wiki_page.html
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
-
-## Web scraping
 
 In this example we will scrape the F1 driver data from wikipedia, that is online [here](https://en.wikipedia.org/wiki/List_of_Formula_One_drivers).
 The large table contains a lot of data that we want to download.

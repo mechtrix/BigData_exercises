@@ -10,3 +10,5 @@ There are many sources out there, we will start working with a couple of them.
 * [After this, we will work on the mechanics of API calls.](API_data.qmd)
 * [A quick introduction in working with databases is then given.](databases.qmd)
 * [Also, we will have a short intro into web scraping](web_scraping.qmd)
+
+![openAI prompt: give me a picture about Data Sources](img/data_sources.png)

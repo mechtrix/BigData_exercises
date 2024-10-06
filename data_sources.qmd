@@ -3,7 +3,7 @@ title: "Data Sources"
 format: live-html
 engine: knitr
 resources: 
-  - "data"
+  - data
 webr:
   packages:
     - dplyr
@@ -69,7 +69,7 @@ It is not as convenient, but you do not need to install or download any package 
 Check out the variable content using the commands above!
 
 ```{webr}
-flights_data_base <-  read.csv("flights.csv")
+flights_data_base <-  read.csv("data/flights.csv")
 ```
 
 In the `tidyverse` we also have the [readr](https://readr.tidyverse.org/) package. 
@@ -78,7 +78,7 @@ We do not need to care about that now, but it is good to know.
 
 ```{webr}
 library(readr)
-flights_data_readr <-  read_csv("flights.csv")
+flights_data_readr <-  read_csv("data/flights.csv")
 
 ```
 

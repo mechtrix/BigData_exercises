@@ -2,6 +2,8 @@
 title: "Data Sources"
 format: live-html
 engine: knitr
+resources: 
+  - "data"
 webr:
   packages:
     - dplyr

@@ -14,10 +14,6 @@ webr:
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
-For BigData we need - Data.
-There are many sources out there, we will start working with a couple of them.
-
-
 ## Web scraping
 
 In this example we will scrape the F1 driver data from wikipedia, that is online [here](https://en.wikipedia.org/wiki/List_of_Formula_One_drivers).

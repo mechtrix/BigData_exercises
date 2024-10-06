@@ -4,12 +4,12 @@ project:
 
 website:
   title: "Exercises for the Big Data lecture"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - get_started.qmd
-      - data_sources.qmd
+  # navbar:
+  #   left:
+  #     - href: index.qmd
+  #       text: Home
+  #     - get_started.qmd
+  #     - data_sources.qmd
   sidebar: 
     style: "docked"
     search: true
@@ -25,5 +25,5 @@ format:
     css: styles.css
     toc: true
 
-
+toc: true
 

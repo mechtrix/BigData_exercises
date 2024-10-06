@@ -3,17 +3,7 @@ title: "Data Sources"
 format: live-html
 engine: knitr
 resources: 
-  - data
-webr:
-  packages:
-    - dplyr
-    - jsonlite
-    - ggplot2
-    - duckdb
-    - dbplyr
-    - janitor
-    - rvest
-    - readr
+  - "data"
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
@@ -21,6 +11,15 @@ For BigData we need - Data.
 There are many sources out there, we will start working with a couple of them.
 
 ## data provided by R
+
+    <!-- - dplyr -->
+    <!-- - jsonlite -->
+    <!-- - ggplot2 -->
+    <!-- - duckdb -->
+    <!-- - dbplyr -->
+    <!-- - janitor -->
+    <!-- - rvest -->
+    <!-- - readr -->
 
 You can simply use data that is natively provided by R.
 A famous example is the titanic data set.

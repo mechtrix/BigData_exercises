@@ -13,9 +13,7 @@ webr:
     - rvest
     - readr
   resources:
-    - https://coatless.github.io/raw-data/flights.csv','flights.csv
-    - https://raw.githubusercontent.com/mechtrix/data/main/raw_data/mtcars.duckdb
-    - https://raw.githubusercontent.com/mechtrix/data/refs/heads/main/raw_data/f1_drivers_wiki_page.html
+    - data
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 

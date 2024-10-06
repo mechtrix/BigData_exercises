@@ -7,6 +7,27 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
+    "objectID": "data_sources.html",
+    "href": "data_sources.html",
+    "title": "Data Sources",
+    "section": "",
+    "text": "For BigData we need - Data. There are many sources out there, we will start working with a couple of them."
+  },
+  {
+    "objectID": "data_sources.html#data-provided-by-r",
+    "href": "data_sources.html#data-provided-by-r",
+    "title": "Data Sources",
+    "section": "data provided by R",
+    "text": "data provided by R\nYou can simply use data that is natively provided by R. A famous example is the titanic data set. Do this using the data() command as provided below\n\n\n\n\n\n\n\n\nThere is not a lot that happened, because we do not use an IDE. An IDE like RStudio would acutally display the variables. This is a trade-off we have to live with the convinienct of not setting up R, but of course, there are ways around it. Below are a couple of ways to display data: - the printcommand is the most verbose way to output data - the head command prints only the first couple of lines (can be specified using head(object, n = X) - the glimpse command is very convenient, but needs the dplyr package to be loaded or referenced (with :: as shown below) - the str command give the structure of the object, so it provides a meta view of the variable. This is convenient if you have some unexpected output."
+  },
+  {
+    "objectID": "data_sources.html#csv",
+    "href": "data_sources.html#csv",
+    "title": "Data Sources",
+    "section": "csv",
+    "text": "csv\nReading a csv is fairly simple, we just need the file path. Lucky for you this has been prepared, the file was already downloaded to the Virtual File System (VFS) that webR uses. Classically, we can use the read.csv() function from baseR. It is not as convenient, but you do not need to install or download any package to work with it. Check out the variable content using the commands above!\n\n\n\n\n\n\n\n\nIn the tidyverse we also have the readr package. It give more flexibility, for example specifiying columns. We do not need to care about that now, but it is good to know.\n\n\n\n\n\n\n\n\nBut we can also explore the VFS a little by using the getwd() and the list.files() command. There you can see the flights.csv file that we read in before! When you output the complete VFS - what do you notice?"
+  },
+  {
     "objectID": "get_started.html",
     "href": "get_started.html",
     "title": "Getting started",

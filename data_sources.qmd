@@ -19,8 +19,80 @@ webr:
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
+For BigData we need - Data.
+There are many sources out there, we will start working with a couple of them.
+
+## data provided by R
+
+You can simply use data that is natively provided by R.
+A famous example is the titanic data set.
+Do this using the `data()` command as provided below
+
 ```{webr}
-for (x in 1:5) {
-  print(x ** 2)
-}
+
+data("Titanic")
+
+```
+
+There is not a lot that happened, because we do not use an IDE.
+An IDE like RStudio would acutally display the variables.
+This is a trade-off we have to live with the convinienct of not setting up R, but of course, there are ways around it.
+Below are a couple of ways to display data:
+- the `print`command is the most verbose way to output data
+- the `head` command prints only the first couple of lines (can be specified using `head(object, n = X`)
+- the `glimpse` command is very convenient, but needs the `dplyr` package to be loaded or referenced (with `::` as shown below)
+- the `str` command give the structure of the object, so it provides a meta view of the variable. This is convenient if you have some unexpected output.
+
+```{webr}
+print(Titanic)
+```
+
+
+```{webr}
+head(Titanic)
+```
+
+
+```{webr}
+dplyr::glimpse(Titanic)
+```
+
+
+```{webr}
+str(Titanic)
+```
+
+## csv
+
+Reading a csv is fairly simple, we just need the file path.
+Lucky for you this has been prepared, the file was already downloaded to the Virtual File System (VFS) that webR uses.
+Classically, we can use the `read.csv()` function from baseR.
+It is not as convenient, but you do not need to install or download any package to work with it.
+Check out the variable content using the commands above!
+
+```{webr}
+flights_data_base <-  read.csv("flights.csv")
+```
+
+In the `tidyverse` we also have the [readr](https://readr.tidyverse.org/) package. 
+It give more flexibility, for example specifiying columns.
+We do not need to care about that now, but it is good to know.
+
+```{webr}
+library(readr)
+flights_data_readr <-  read_csv("flights.csv")
+
+```
+
+But we can also explore the VFS a little by using the `getwd()` and the `list.files()` command.
+There you can see the `flights.csv` file that we read in before!
+When you output the complete VFS - what do you notice?
+
+```{webr}
+getwd()
+
+list.files()
+
+list.files('/', full = TRUE, recursive = TRUE)
+
 ```

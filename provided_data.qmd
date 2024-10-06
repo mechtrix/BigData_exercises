@@ -71,7 +71,7 @@ A data frame is a table or a two-dimensional array-like structure in which each 
 + The data stored in a data frame can be of numeric, factor or character type.
 + Each column should contain same number of data items.
 
-`dataframe`s also should be *tidy*[@tidy-data].
+`dataframe`s also should be *tidy* [@tidy-data].
 But what is a tidy `dataframe`?
 There is a long philosophical debate, that is interesting to follow, but hold only little practical value. 
 The ground rule for tidy data is:

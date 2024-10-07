@@ -40,5 +40,26 @@ flights_data_readr <-  read_csv("data/flights.csv")
 
 ```
 
+# plotting data
 
+Ok, the data is there, but what can we do with it?
+First, use some of commands from before to explore the dataset.
 
+```{webr}
+#| exercise: ex_1
+
+flights_data_readr |> _______
+
+```
+
+::: { .hint exercise="ex_1"}
+::: { .callout-note collapse="false"}
+## Hint 1
+
+Consider using the `glimpse()` function from `dplyr`.
+
+```r
+starwars |> glimpse()
+```
+:::
+:::

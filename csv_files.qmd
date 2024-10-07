@@ -1,5 +1,6 @@
 ---
 title: "csv files"
+bibliography: https://api.citedrive.com/bib/d9c91a98-2836-4c6f-989d-083b698b046c/references.bib?x=eyJpZCI6ICJkOWM5MWE5OC0yODM2LTRjNmYtOTg5ZC0wODNiNjk4YjA0NmMiLCAidXNlciI6ICI1NjQ5IiwgInNpZ25hdHVyZSI6ICIzNGZhNzEzZTAxMWNkYzZkODk1N2YzYjUzMTJlM2Y2YmQ4YmI3ZDRlZmE1YmFhMzIxYTFiNzY0ZDRkOGVlNjRhIn0=
 format: live-html
 engine: knitr
 resources: 
@@ -9,6 +10,7 @@ webr:
       - dplyr
       - ggplot2
       - readr
+      - scales
     resources:
       - data/flights.csv
 ---
@@ -59,7 +61,75 @@ flights_data_readr |> _______
 Consider using the `glimpse()` function from `dplyr`.
 
 ```r
-starwars |> glimpse()
+flights_data_readr |> glimpse()
 ```
 :::
 :::
+
+Nice use of the pipe there!
+Next, we will do some plotting using the package [`ggplot2`](https://ggplot2.tidyverse.org/) which is based on the *Grammar of Graphics* [@the_wilkinson_July].
+This is an extensive plotting framework and we will not cover all details here.
+At first, it is intimidating, but it gets better (I promise).
+Here, we will be using `ggplot2` to look at the departure delay of airports in the U.S.
+
+```{webr}
+
+flights_data_readr |> 
+  ggplot(
+    aes(
+      x = dep_delay,
+    )
+  )+
+  geom_histogram()
+
+```
+
+The plot is fairly simple and we will not customize it further to keep things simple.
+Just look at it and admire its beauty.
+Keep in mind, that practically every aspect of it is editable.
+It is hard to see anything, so we will now use a method called *faceting* to show the *ordinal* variable `origin`, which stands for the origin where the flights started.
+
+```{webr}
+
+flights_data_readr |> 
+  ggplot(
+    aes(
+      x = dep_delay,
+    )
+  )+
+  geom_histogram()+
+  facet_wrap(~origin)
+
+```
+
+Below, you can see a plot that is highly customized to show, what `ggplot2` is capable of.
+
+```{webr}
+flights_data_readr |> 
+  ggplot(
+    aes(
+      x = dep_delay,
+    )
+  )+
+  geom_histogram(
+    bins = 20,
+    fill = "steelblue",
+    color = "white"
+  )+
+  labs(
+    title = "departure delay for origin airports",
+    x = "delay in min",
+    y = "count"
+  )+
+  facet_wrap(
+    ~origin
+    )+
+  scale_y_log10(
+    labels = label_log()
+    )+
+  theme_minimal(base_size = 15)
+```
+
+It also tries to maximize the *data-ink* ration, a concept that was introduced by [Edward Tufte](https://de.wikipedia.org/wiki/Edward_Tufte), a graphic designer that worked on statistical graphics.
+We will not dive into this work, but let this be said: Plotting is an art and making good plots takes time and effort (even when they look simple).
+A good plot brings the message across without the need for further explanation.

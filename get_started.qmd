@@ -90,3 +90,38 @@ When you output the complete VFS - what do you notice?
 list.files('/', full = TRUE, recursive = TRUE)
 
 ```
+
+# The pipe
+
+The pipe is a powerful operator and you will encounter it sooner or later.
+There are two pipe operators.
+The one you will find the most in documentation or on [SO](https://stackoverflow.com/) is the first pipe that has been introduced: `%>%`.
+It is not native to `R` and is provided by the package [magrittr](https://magrittr.tidyverse.org/).
+The pipe became so popular, that it is now provided with `Base R`, but the characters differ: `|>`.
+In the documents you will find a happy mix of different pipes, just treat them as the same for now.
+The base pipe can be used with classical *non*-tidyverse functions, that do not take data as the first input.
+You do not have to care too much about that detail now, but it is good to know.
+
+## Basic piping
+
+* `x |> f` is equivalent to `f(x)`
+* `x |> f(y)` is equivalent to `f(x,y)`
+* `x |> f |> g |> h` is equivalent to `h(g(f(x)))`
+
+## examples
+
+```{webr}
+mean(5)
+5 |> mean()
+
+```
+
+```{webr}
+vec <- c(5,3)
+
+vec |> mean() |> sum()
+
+vec |> sum() |> mean()
+
+```
+

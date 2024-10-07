@@ -1,7 +1,7 @@
 project:
   type: website
   output-dir: docs
-
+toc: true
 website:
   title: "Exercises for the Big Data lecture"
   sidebar: 

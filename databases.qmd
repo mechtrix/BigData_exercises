@@ -59,7 +59,7 @@ glimpse(mtcars)
 ::: { .callout-note collapse="false"}
 ## Hint 2
 
-Use the `head()` command - and check out `?head`.
+Use the `head()` command - and check out `?head` to see understand the meaning of the `n` argument.
 
 ```r
 head(mtcars)

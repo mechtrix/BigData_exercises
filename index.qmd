@@ -2,7 +2,7 @@
 title: "Exercises for the Big Data lecture"
 ---
 
-This is the landing page for the Big Data exercises tough by Prof. Dr. Tim Weber at the [DIT](https://www.th-deg.de/en/campus-cham).
+This is the landing page for the Big Data exercises taught by [Prof. Dr. Tim Weber](https://github.com/mechtrix) at the [DIT](https://www.th-deg.de/en/campus-cham).
 This is a more or less static page, for admin stuff got to [ilearn](https://ilearn.th-deg.de/).
 The exercises are designed to run in the browser of your choice.
 Feel free to setup `R` on your local machine, but do not expect support from us.

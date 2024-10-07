@@ -15,7 +15,7 @@
     "href": "index.html",
     "title": "Exercises for the Big Data lecture",
     "section": "",
-    "text": "This is the landing page for the Big Data exercises tough by Prof. Dr. Tim Weber at the DIT. This is a more or less static page, for admin stuff got to ilearn. The exercises are designed to run in the browser of your choice. Feel free to setup R on your local machine, but do not expect support from us. You can download R here. You can download RStudio (the free IDE for R) here. If you want to get things going, start here. Packages forR can be downloaded from CRAN, but this should be done from within R. If you want to contribute or get packages that are not hosted on CRAN, you can setup a Github account, but this is purely optional.\n\nGet started\nData sources\n\n\n\n\nopenAI prompt: give me a picture about Big Data"
+    "text": "This is the landing page for the Big Data exercises taught by Prof. Dr. Tim Weber at the DIT. This is a more or less static page, for admin stuff got to ilearn. The exercises are designed to run in the browser of your choice. Feel free to setup R on your local machine, but do not expect support from us. You can download R here. You can download RStudio (the free IDE for R) here. If you want to get things going, start here. Packages forR can be downloaded from CRAN, but this should be done from within R. If you want to contribute or get packages that are not hosted on CRAN, you can setup a Github account, but this is purely optional.\n\nGet started\nData sources\n\n\n\n\nopenAI prompt: give me a picture about Big Data"
   },
   {
     "objectID": "data_sources.html",

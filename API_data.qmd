@@ -76,6 +76,9 @@ dplyr::glimpse(foodbankJSON)
 
 Ok, so now we have data, but what can we do with it?
 Below is some code where we count the foodbanks according to region in the UK.
+The [`count()`](https://dplyr.tidyverse.org/reference/count.html) command is an abbreviation of the `group_by()` command and the `summarise()` command. 
+It is quicker, but not as versatile.
+We use it here, to get some quick results.
 
 ```{webr-r}
 cnt_foodbank <- foodbankJSON |> 
@@ -104,4 +107,22 @@ cnt_foodbank |>
 
 ```
 
+Notice that we have ordered the `x-axis` to start with the highest bar.
+This makes barplots much more readable as if we would not have done this.
+
+```{webr}
+cnt_foodbank |> 
+  ggplot(
+    aes(
+      x = country,
+      y = n
+    )
+  )+
+  geom_col()+
+  labs(
+    title = "Count of foddbanks in the UK per region",
+    x = "region",
+    y = "count"
+  )
+```
 

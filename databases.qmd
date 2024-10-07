@@ -9,6 +9,7 @@ webr:
       - duckdb
       - dbplyr
       - dplyr
+      - ggplot2
     resources:
       - data/mtcars.duckdb
 ---
@@ -38,8 +39,45 @@ Use some of the commands you have already learned to inspect the data!
 You are on your own here, have fun.
 
 ```{webr}
-
+#| exercise: ex_2
+_____()
 ```
+
+::: { .hint exercise="ex_2"}
+::: { .callout-note collapse="false"}
+## Hint 1
+
+Use the `glimpse()` command.
+
+```r
+glimpse()
+```
+:::
+:::
+
+::: { .hint exercise="ex_2"}
+::: { .callout-note collapse="false"}
+## Hint 2
+
+Use the `head()` command.
+
+```r
+head()
+```
+:::
+:::
+
+::: { .hint exercise="ex_2"}
+::: { .callout-note collapse="false"}
+## Hint 2
+
+Use the `print()` command.
+
+```r
+print()
+```
+:::
+:::
 
 The data is well documented, since it is a fairly common toy dataset in `R`, so you can find some documentation on it [here](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars).
 
@@ -73,6 +111,8 @@ The code below shall give you inspiration on how to start.
 Maybe you want to use the `shape` aesthetic?
 
 ```{webr}
+#| exercise: ex_3
+
 mtcars |> 
   ggplot(
     aes(
@@ -83,4 +123,25 @@ mtcars |>
   geom_point()
 ```
 
+::: { .hint exercise="ex_3"}
+::: { .callout-note collapse="false"}
+## Hint 1
 
+See this hint on how to use the `shape` aesthetic and plot a rough linear model using `geom_smooth()`.
+
+```r
+mtcars |> 
+  ggplot(
+    aes(
+      x = cyl,
+      y = hp,
+      shape = as.factor(gear)
+    )
+  )+
+  geom_point()+
+  geom_smooth(
+    method = "lm"
+  )
+```
+:::
+:::

@@ -76,7 +76,7 @@
     "href": "databases.html#play-around",
     "title": "Databases",
     "section": "play around",
-    "text": "play around\nYou can try to use ggplot on the data. The code below shall give you inspiration on how to start. Maybe you want to use the shape aesthetic?",
+    "text": "play around\nYou can try to use ggplot on the data. The code below shall give you inspiration on how to start. Maybe you want to use the shape aesthetic?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nSee this hint on how to use the shape aesthetic and plot a rough linear model using geom_smooth().\nmtcars |&gt; \n  ggplot(\n    aes(\n      x = cyl,\n      y = hp,\n      shape = as.factor(gear)\n    )\n  )+\n  geom_point()+\n  geom_smooth(\n    method = \"lm\"\n  )",
     "crumbs": [
       "Data Sources",
       "Databases"

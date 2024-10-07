@@ -65,7 +65,18 @@
     "href": "databases.html",
     "title": "Databases",
     "section": "",
-    "text": "loading data\nAs with API’s a real connection to a remote database is right now not feasible using webR. But we can use duckDB which is a fast in-process analytical database. It has one more advantage: It is locally hosted, which means it is a physical file on your machine. We also use dbplyr which is a database backend that uses the same or similar logic as dplyr for data manipulation with remote data sources.\n\n\n\n\n\n\n\n\nplotting data\nSo did it work? You can query the object using the same commands as described above. Another way is of course to plot it, but that is hard when we do not know what variables are in the dataset. Sometimes in those cases, the R base plotting is an excellent way of doing some quick E(xplorative)D(ata)A(nalysis)",
+    "text": "As with API’s a real connection to a remote database is right now not feasible using webR. But we can use duckDB which is a fast in-process analytical database. It has one more advantage: It is locally hosted, which means it is a physical file on your machine. We also use dbplyr which is a database backend that uses the same or similar logic as dplyr for data manipulation with remote data sources.",
+    "crumbs": [
+      "Data Sources",
+      "Databases"
+    ]
+  },
+  {
+    "objectID": "databases.html#play-around",
+    "href": "databases.html#play-around",
+    "title": "Databases",
+    "section": "play around",
+    "text": "play around\nYou can try to use ggplot on the data. The code below shall give you inspiration on how to start. Maybe you want to use the shape aesthetic?",
     "crumbs": [
       "Data Sources",
       "Databases"

@@ -8,6 +8,7 @@ webr:
     packages:
       - duckdb
       - dbplyr
+      - dplyr
     resources:
       - data/mtcars.duckdb
 ---

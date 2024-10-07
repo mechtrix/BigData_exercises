@@ -32,6 +32,27 @@ mtcars <- tbl(ddb_con,"mtcars_table") |> collect()
 
 ```
 
+# inspecting the data
+
+Use some of the commands you have already learned to inspect the data!
+You are on your own here, have fun.
+
+```{webr}
+
+```
+
+The data is well documented, since it is a fairly common toy dataset in `R`, so you can find some documentation on it [here](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars).
+
+We have just made it available via a `duckdb` in-process database, you can also retrieve that data by typing this command.
+This would take the fun out of playing around with databases though.
+
+```{r}
+#| eval: false
+
+data(mtcars)
+```
+
+
 # plotting data
 
 So did it work? 
@@ -45,5 +66,21 @@ plot(mtcars)
 
 ```
 
+## play around
+
+You can try to use ggplot on the data.
+The code below shall give you inspiration on how to start.
+Maybe you want to use the `shape` aesthetic?
+
+```{webr}
+mtcars |> 
+  ggplot(
+    aes(
+      x = cyl,
+      y = hp
+    )
+  )+
+  geom_point()
+```
 
 

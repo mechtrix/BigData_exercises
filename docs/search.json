@@ -93,6 +93,36 @@
     ]
   },
   {
+    "objectID": "get_started.html#function-help",
+    "href": "get_started.html#function-help",
+    "title": "Get started",
+    "section": "function help",
+    "text": "function help",
+    "crumbs": [
+      "Get started"
+    ]
+  },
+  {
+    "objectID": "get_started.html#dataset-documentation",
+    "href": "get_started.html#dataset-documentation",
+    "title": "Get started",
+    "section": "dataset documentation",
+    "text": "dataset documentation",
+    "crumbs": [
+      "Get started"
+    ]
+  },
+  {
+    "objectID": "get_started.html#package-documentation",
+    "href": "get_started.html#package-documentation",
+    "title": "Get started",
+    "section": "package documentation",
+    "text": "package documentation",
+    "crumbs": [
+      "Get started"
+    ]
+  },
+  {
     "objectID": "get_started.html#basic-piping",
     "href": "get_started.html#basic-piping",
     "title": "Get started",
@@ -108,6 +138,26 @@
     "title": "Get started",
     "section": "examples",
     "text": "examples",
+    "crumbs": [
+      "Get started"
+    ]
+  },
+  {
+    "objectID": "get_started.html#base-r-reference",
+    "href": "get_started.html#base-r-reference",
+    "title": "Get started",
+    "section": "Base R reference",
+    "text": "Base R reference",
+    "crumbs": [
+      "Get started"
+    ]
+  },
+  {
+    "objectID": "get_started.html#package-citation",
+    "href": "get_started.html#package-citation",
+    "title": "Get started",
+    "section": "package citation",
+    "text": "package citation",
     "crumbs": [
       "Get started"
     ]

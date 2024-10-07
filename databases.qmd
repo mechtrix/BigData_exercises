@@ -40,7 +40,7 @@ You are on your own here, have fun.
 
 ```{webr}
 #| exercise: ex_2
-_____()
+_____(mtcars)
 ```
 
 ::: { .hint exercise="ex_2"}
@@ -50,7 +50,7 @@ _____()
 Use the `glimpse()` command.
 
 ```r
-glimpse()
+glimpse(mtcars)
 ```
 :::
 :::
@@ -59,10 +59,10 @@ glimpse()
 ::: { .callout-note collapse="false"}
 ## Hint 2
 
-Use the `head()` command.
+Use the `head()` command - and check out `?head`.
 
 ```r
-head()
+head(mtcars)
 ```
 :::
 :::

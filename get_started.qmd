@@ -18,6 +18,41 @@ You can run single lines by pressing `Ctrl` + `Enter`.
 1+1
 ```
 
+# Getting help
+
+`R` has a very active, diverse and inclusive community.
+You can find help online by simply do a quick web search.
+[Stack Overflow](https://stackoverflow.com/) is probably one of the best resources.
+[Github](https://github.com/) - especially the issue and discussions - is a brillian ressources, but may be a little to technical for starters.
+You can find tutorials online, or look in the package documentation on CRAN or the packages Website.
+This all requires you to switch from `R` to your browser, viewer etc.
+Sometimes, you just need a quick fix, the `?` command is here to help.
+It calls the `R` in-built help and documentation and is a goto resources for simply *looking stuff up* because let's face it: who can remember everything?
+
+Try it out!
+
+## function help
+
+```{webr}
+?head
+```
+
+```{webr}
+?print
+```
+
+## dataset documentation
+
+```{webr}
+?iris
+```
+
+## package documentation
+
+```{webr}
+?stats
+```
+
 # exploring objects
 
 You can assign values to all kind of object names.
@@ -44,7 +79,7 @@ print(a)
 
 If we assign a value to a new object, we can also print this, but what if we forgot the objects we have assigend?
 In an IDE we would have a viewer that shows the objects, but we do not have this in webR - a small trade-off that comes with you being able to use this in the browser.
-But we can use the `ls()` command to show all objects in the workspace (Linux users may find this familiar)
+But we can use the `ls()` command to show all objects in the workspace (Linux users may find this familiar).
 
 ```{webr}
 b <- 2
@@ -53,7 +88,7 @@ ls()
 
 ```
 
-
+![The Environment in the RStudio IDE](img/ide_environment.png)
 
 # loading libraries
 
@@ -123,5 +158,22 @@ vec |> mean() |> sum()
 
 vec |> sum() |> mean()
 
+```
+
+# Give credit where its due
+
+If you are using `R` in a professional setting it is good practice to give credit where it's due and cite the respective authors.
+`R` offers the `citation()` command to create `bibtex` entries that can be used by practicall all reference management software.
+
+## Base R reference
+
+```{webr}
+citation()
+```
+
+## package citation
+
+```{webr}
+citation("stats")
 ```
 

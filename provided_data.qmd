@@ -30,6 +30,7 @@ Below are a couple of ways to display data:
 - the `head` command prints only the first couple of lines (can be specified using `head(object, n = X`)
 - the `glimpse` command is very convenient, but needs the `dplyr` package to be loaded or referenced (with `::` as shown below)
 - the `str` command give the structure of the object, so it provides a meta view of the variable. This is convenient if you have some unexpected output.
+- the `class()` command returns the *class* of the object
 
 # inspecting data
 
@@ -51,6 +52,11 @@ dplyr::glimpse(Titanic)
 ```{webr}
 str(Titanic)
 ```
+
+```{webr}
+class(Titanic)
+```
+
 
 Ok, so now we know something about the data, but what does it all mean?
 Luckily, with in-built datasets, there usually comes a pretty good documentation, which we can call using the `?`.
@@ -100,15 +106,12 @@ You can see above the principle of tidy data.
 Now, the `glimpse()` command also give a different result.
 
 ```{webr}
-
 glimpse(Titanic_df)
-
 ```
 
 You can also play around with the `summary()` function on the Titanic `table` or the Titanic `dataframe`.
 
 ```{webr}
-
 summary(Titanic)
 
 summary(Titanic_df)

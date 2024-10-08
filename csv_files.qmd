@@ -22,7 +22,7 @@ Reading a csv is fairly simple, we just need the file path.
 Lucky for you this has been prepared, the file was already downloaded to the Virtual File System (VFS) that webR uses.
 Classically, we can use the `read.csv()` function from baseR.
 It is not as convenient, but you do not need to install or download any package to work with it.
-Check out the variable content using the commands above!
+Check out the variable content using the commands from [data shipped with R](provided_data.qmd)!
 
 ## Base R
 
@@ -49,7 +49,6 @@ First, use some of commands from before to explore the dataset.
 
 ```{webr}
 #| exercise: ex_1
-
 flights_data_readr |> _______
 
 ```
@@ -73,7 +72,6 @@ At first, it is intimidating, but it gets better (I promise).
 Here, we will be using `ggplot2` to look at the departure delay of airports in the U.S.
 
 ```{webr}
-
 flights_data_readr |> 
   ggplot(
     aes(
@@ -90,7 +88,6 @@ Keep in mind, that practically every aspect of it is editable.
 It is hard to see anything, so we will now use a method called *faceting* to show the *ordinal* variable `origin`, which stands for the origin where the flights started.
 
 ```{webr}
-
 flights_data_readr |> 
   ggplot(
     aes(

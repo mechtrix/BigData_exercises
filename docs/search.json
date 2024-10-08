@@ -22,7 +22,7 @@
     "href": "data_sources.html",
     "title": "Data Sources",
     "section": "",
-    "text": "For BigData we need - Data. There are many sources out there, we will start working with a couple of them.\n\nFirst, we will look into data that is shipped with R.\nThen, we will check out how to work with csv files.\nAfter this, we will work on the mechanics of API calls.\nA quick introduction in working with databases is then given.\nAlso, we will have a short intro into web scraping\n\n\n\n\nopenAI prompt: give me a picture about Data Sources",
+    "text": "For BigData we need - Data. There are many sources out there, we will start working with a couple of them.\n\ndata shipped with R\ncsv files\nCallilng API’s\nDatabases\nweb scraping\n\n\n\n\nopenAI prompt: give me a picture about Data Sources",
     "crumbs": [
       "Data Sources"
     ]
@@ -32,7 +32,7 @@
     "href": "csv_files.html",
     "title": "csv files",
     "section": "",
-    "text": "Reading a csv is fairly simple, we just need the file path. Lucky for you this has been prepared, the file was already downloaded to the Virtual File System (VFS) that webR uses. Classically, we can use the read.csv() function from baseR. It is not as convenient, but you do not need to install or download any package to work with it. Check out the variable content using the commands above!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the tidyverse we also have the readr package. It give more flexibility, for example specifiying columns. We do not need to care about that now, but it is good to know.",
+    "text": "Reading a csv is fairly simple, we just need the file path. Lucky for you this has been prepared, the file was already downloaded to the Virtual File System (VFS) that webR uses. Classically, we can use the read.csv() function from baseR. It is not as convenient, but you do not need to install or download any package to work with it. Check out the variable content using the commands from data shipped with R!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the tidyverse we also have the readr package. It give more flexibility, for example specifiying columns. We do not need to care about that now, but it is good to know.",
     "crumbs": [
       "Data Sources",
       "csv files"
@@ -177,7 +177,7 @@
     "href": "provided_data.html",
     "title": "data shipped with R",
     "section": "",
-    "text": "You can simply use data that is natively provided by R. A famous example is the titanic data set. Do this using the data() command as provided below\n\n\n\n\n\n\n\n\nThere is not a lot that happened, because we do not use an IDE. An IDE like RStudio would acutally display the variables. This is a trade-off we have to live with the convinienct of not setting up R, but of course, there are ways around it. Below are a couple of ways to display data: - the printcommand is the most verbose way to output data - the head command prints only the first couple of lines (can be specified using head(object, n = X) - the glimpse command is very convenient, but needs the dplyr package to be loaded or referenced (with :: as shown below) - the str command give the structure of the object, so it provides a meta view of the variable. This is convenient if you have some unexpected output.",
+    "text": "You can simply use data that is natively provided by R. A famous example is the titanic data set. Do this using the data() command as provided below\n\n\n\n\n\n\n\n\nThere is not a lot that happened, because we do not use an IDE. An IDE like RStudio would acutally display the variables. This is a trade-off we have to live with the convinienct of not setting up R, but of course, there are ways around it. Below are a couple of ways to display data: - the printcommand is the most verbose way to output data - the head command prints only the first couple of lines (can be specified using head(object, n = X) - the glimpse command is very convenient, but needs the dplyr package to be loaded or referenced (with :: as shown below) - the str command give the structure of the object, so it provides a meta view of the variable. This is convenient if you have some unexpected output. - the class() command returns the class of the object",
     "crumbs": [
       "Data Sources",
       "data shipped with R"

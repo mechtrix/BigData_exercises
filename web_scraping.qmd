@@ -62,7 +62,6 @@ It has been uploaded to your webR already, but check out the github link.
 Try to alter the code to see the effect of the package, you have all the tools available.
 
 ```{webr-r}
-
 drivers_F1 <- html_element(page, "table.sortable") %>%
   html_table() |> 
   clean_names() 
@@ -94,7 +93,6 @@ But we do not need it anyway, so we get rid of it.
 Check out the `nrow()` command by typing `?nrow` to see what it does.
 
 ```{webr-r}
-
 drivers_F1 <- drivers_F1 |> 
    slice_head(
     n = nrow(drivers_F1)-1
@@ -108,7 +106,6 @@ We are (for now) only interested in the number of won championships, so we get r
 This is achieved by also using the `mutate()` command provided by `dplyr`, you can find more detailed references [here](https://dplyr.tidyverse.org/reference/mutate.html).
 
 ```{webr-r}
-
 drivers_F1 <- drivers_F1 |> 
   mutate(
     drivers_championships = parse_number(substr(drivers_championships,start = 1, stop = 1))
@@ -160,7 +157,6 @@ We can look into how many championships by nation have been won.
 For this, we first `group_by()` nation, and then we `summarise()` the sum of all `drivers_championships`.
 
 ```{webr-r}
-
 championships_by_nation <- drivers_F1 %>%
   group_by(
     nationality
@@ -181,7 +177,6 @@ glimpse(championships_by_nation)
 But the order is alphabetically, we want to see the top nations!
 
 ```{webr-r}
-
 championships_by_nation |> arrange(championship_wins)
 
 ```
@@ -189,7 +184,6 @@ championships_by_nation |> arrange(championship_wins)
 Oh no, wrong again, we want to have it descending.
 
 ```{webr-r}
-
 championships_by_nation |> arrange(desc(championship_wins))
 
 ```
@@ -197,7 +191,6 @@ championships_by_nation |> arrange(desc(championship_wins))
 Ok, and who is the driver with the most won championships?
 
 ```{webr-r}
-
 championships_by_driver <- drivers_F1 %>%
   group_by(
     driver_name
@@ -214,7 +207,6 @@ championships_by_driver <- drivers_F1 %>%
 Next thing we want to know is, if there is a relationship between number of `pole_positions` and the number of championships that have been won by a driver (`drivers_championsips`).
 
 ```{webr-r}
-
 drivers_F1 %>%
   filter(pole_positions > 1) %>%
   ggplot(aes(x = pole_positions, y = drivers_championships)) +

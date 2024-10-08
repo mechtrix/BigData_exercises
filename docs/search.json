@@ -163,6 +163,16 @@
     ]
   },
   {
+    "objectID": "get_started.html#footnotes",
+    "href": "get_started.html#footnotes",
+    "title": "Get started",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://en.wikipedia.org/wiki/Working_directory↩︎",
+    "crumbs": [
+      "Get started"
+    ]
+  },
+  {
     "objectID": "provided_data.html",
     "href": "provided_data.html",
     "title": "data shipped with R",

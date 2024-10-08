@@ -23,11 +23,11 @@ You can run single lines by pressing `Ctrl` + `Enter`.
 `R` has a very active, diverse and inclusive community.
 You can find help online by simply do a quick web search.
 [Stack Overflow](https://stackoverflow.com/) is probably one of the best resources.
-[Github](https://github.com/) - especially the issue and discussions - is a brillian ressources, but may be a little to technical for starters.
-You can find tutorials online, or look in the package documentation on CRAN or the packages Website.
+[Github](https://github.com/) - especially the issue and discussions - is a brilliant resource, but may be a little to technical for starters.
+You can find tutorials online, or look in the package documentation on [CRAN](https://cran.r-project.org/) or the [package website](https://www.tidyverse.org/).
 This all requires you to switch from `R` to your browser, viewer etc.
-Sometimes, you just need a quick fix, the `?` command is here to help.
-It calls the `R` in-built help and documentation and is a goto resources for simply *looking stuff up* because let's face it: who can remember everything?
+Sometimes, when you just need a quick fix - the `?` command is here to help.
+It calls the `R` in-built help and documentation and is a goto resource for simply *looking stuff up* because let's face it: who can remember everything?
 
 Try it out!
 
@@ -104,13 +104,19 @@ Here we have loaded the [dplyr](https://dplyr.tidyverse.org/) package, which is 
 It is part of the much bigger [tidyverse](https://www.tidyverse.org/).
 Since the packages always have to be installed, we will not use the more extensive command `library(tidyverse)`.
 This would trigger to install a lot of packages.
-If you want to do this on your own machine, please do so
+If you want to do this on your own machine, please do so.
 
 # The Virtual File System (VFS)
 
+`webR` provides you with a full VFS.
 We can explore the VFS a little by using the `getwd()` and the `list.files()` command.
-There you can see the `flights.csv` file that we read in before!
+Not very impressive at first, we did not save any files in the *working directory*.
+In computing, the working directory of a process is a directory of a hierarchical file system, if any, dynamically associated with the process. 
+It is sometimes called the current working directory (CWD) or just current directory.
+When a process refers to a file using a simple file name or relative path (as opposed to a file designated by a full path from a root directory), the reference is interpreted relative to the working directory of the process. 
+So for example a process with working directory `/rabbit-shoes` that asks to create the file `foo.txt` will end up creating the file `/rabbit-shoes/foo.txt`[^1].
 
+[^1]: <https://en.wikipedia.org/wiki/Working_directory>
 
 ```{webr}
 getwd()

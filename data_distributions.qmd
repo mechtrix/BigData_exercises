@@ -41,7 +41,7 @@ Of course, there is a package for plotting qq plots, [qqplotr](https://cran.r-pr
 dataset |> 
   ggplot(
     aes(
-      sample = smpl.
+      sample = smpl
     )
   )+
   stat_qq_point()
@@ -56,7 +56,7 @@ We nee the qq line and the confidence band.
 dataset |> 
   ggplot(
     aes(
-      sample = smpl.
+      sample = smpl
     )
   )+
   stat_qq_band()+

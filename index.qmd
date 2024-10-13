@@ -14,5 +14,6 @@ If you want to contribute or get packages that are not hosted on CRAN, you can s
 
 * [Get started](get_started.qmd)
 * [Data sources](data_sources.qmd)
+* [Data quality](data_quality.qmd)
 
 ![openAI prompt: give me a picture about Big Data](img/BigData.png)

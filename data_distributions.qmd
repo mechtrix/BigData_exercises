@@ -1,0 +1,67 @@
+---
+title: "Data distributions"
+format: live-html
+engine: knitr
+webr:
+    packages:
+      - dplyr
+      - ggplot2
+      - qqplotr
+---
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+# qq plot
+
+A qq plot compares theoretical quantiles to the actual sample quantiles.
+First, we need to draw some random numbers
+
+```{webr}
+
+dataset <- data.frame(
+  smpl = rnorm(100)
+)
+
+```
+
+Then, we create the simplest form of qq plot - the points.
+This is made with `Base R` graphics - as always and excellent start.
+
+```{webr}
+
+qqnorm(dataset$smpl)
+
+```
+
+From this it is hard to judge if the data is normally distributed.
+We switch to the grammar of graphics for more flexibility.
+Of course, there is a package for plotting qq plots, [qqplotr](https://cran.r-project.org/web/packages/qqplotr/vignettes/introduction.html).
+
+```{webr}
+
+dataset |> 
+  ggplot(
+    aes(
+      sample = smpl.
+    )
+  )+
+  stat_qq_point()
+
+```
+
+Still hard to judge if the data is normally distributed.
+We nee the qq line and the confidence band.
+
+```{webr}
+
+dataset |> 
+  ggplot(
+    aes(
+      sample = smpl.
+    )
+  )+
+  stat_qq_band()+
+  stat_qq_line()+
+  stat_qq_point()
+
+```
+

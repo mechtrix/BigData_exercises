@@ -1,0 +1,9 @@
+---
+title: "Data Quality"
+---
+
+Data Quality is hard
+
+* [check data distributions](data_distributions.qmd)
+
+![openAI prompt: give me a picture about Data Quality](img/data_quality.png)

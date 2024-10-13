@@ -23,6 +23,11 @@ website:
             href: databases.qmd
           - text: "Web scraping"
             href: web_scraping.qmd
+      - section: "Data Quality"
+        href: data_quality.qmd
+        contents: 
+          - text: "data distributions"
+            href: data_distributions.qmd
   page-footer: "Copyright 2024, Prof. Dr. Tim Weber" 
 
 format:

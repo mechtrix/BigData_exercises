@@ -28,6 +28,17 @@
     ]
   },
   {
+    "objectID": "data_distributions.html",
+    "href": "data_distributions.html",
+    "title": "Data distributions",
+    "section": "",
+    "text": "qq plot\nA qq plot compares theoretical quantiles to the actual sample quantiles. First, we need to draw some random numbers\n\n\n\n\n\n\n\n\nThen, we create the simplest form of qq plot - the points. This is made with Base R graphics - as always and excellent start.\n\n\n\n\n\n\n\n\nFrom this it is hard to judge if the data is normally distributed. We switch to the grammar of graphics for more flexibility. Of course, there is a package for plotting qq plots, qqplotr.\n\n\n\n\n\n\n\n\nStill hard to judge if the data is normally distributed. We nee the qq line and the confidence band.",
+    "crumbs": [
+      "Data Quality",
+      "data distributions"
+    ]
+  },
+  {
     "objectID": "csv_files.html",
     "href": "csv_files.html",
     "title": "csv files",
@@ -80,6 +91,16 @@
     "crumbs": [
       "Data Sources",
       "Databases"
+    ]
+  },
+  {
+    "objectID": "data_quality.html",
+    "href": "data_quality.html",
+    "title": "Data Quality",
+    "section": "",
+    "text": "Data Quality is hard\n\ncheck data distributions\n\n\n\n\nopenAI prompt: give me a picture about Data Quality",
+    "crumbs": [
+      "Data Quality"
     ]
   },
   {

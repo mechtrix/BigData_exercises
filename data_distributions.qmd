@@ -7,10 +7,12 @@ webr:
       - dplyr
       - ggplot2
       - qqplotr
+editor_options: 
+  chunk_output_type: console
 ---
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
-# qq plot
+# qq plot (normal data)
 
 A qq plot compares theoretical quantiles to the actual sample quantiles.
 First, we need to draw some random numbers
@@ -65,3 +67,72 @@ dataset |>
 
 ```
 
+# qq plot (normal data with mean and sd)
+
+Here you can see how a qq plot looks for data with a mean and sd
+
+```{webr}
+
+dataset <- data.frame(
+  smpl = rnorm(100, mean = 15, sd=5)
+)
+
+
+dataset |> 
+  ggplot(
+    aes(
+      sample = smpl
+    )
+  )+
+  stat_qq_band()+
+  stat_qq_line()+
+  stat_qq_point()+
+  geom_vline(xintercept = 15)
+
+```
+
+# qq plot for non normal data
+
+Below you can see how a qq plot looks for non normally distributed data
+
+```{webr}
+
+dataset <- data.frame(
+  smpl = runif(100)
+)
+
+dataset |> ggplot(
+    aes(
+      sample = smpl
+    )
+  )+
+  stat_qq_band()+
+  stat_qq_line()+
+  stat_qq_point()
+
+```
+
+But a qq plot can also work for non normally distributed data, if the distribution is adjusted in the code (`unif`).
+
+```{webr}
+
+dataset <- data.frame(
+  smpl = runif(100)
+)
+
+dataset |> ggplot(
+    aes(
+      sample = smpl
+    )
+  )+
+  stat_qq_band(
+    distribution = "unif"
+  )+
+  stat_qq_line(
+    distribution = "unif"
+  )+
+  stat_qq_point(
+    distribution = "unif"
+  )
+
+```

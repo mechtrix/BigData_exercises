@@ -32,7 +32,7 @@
     "href": "data_distributions.html",
     "title": "Data distributions",
     "section": "",
-    "text": "qq plot\nA qq plot compares theoretical quantiles to the actual sample quantiles. First, we need to draw some random numbers\n\n\n\n\n\n\n\n\nThen, we create the simplest form of qq plot - the points. This is made with Base R graphics - as always and excellent start.\n\n\n\n\n\n\n\n\nFrom this it is hard to judge if the data is normally distributed. We switch to the grammar of graphics for more flexibility. Of course, there is a package for plotting qq plots, qqplotr.\n\n\n\n\n\n\n\n\nStill hard to judge if the data is normally distributed. We nee the qq line and the confidence band.",
+    "text": "qq plot (normal data)\nA qq plot compares theoretical quantiles to the actual sample quantiles. First, we need to draw some random numbers\n\n\n\n\n\n\n\n\nThen, we create the simplest form of qq plot - the points. This is made with Base R graphics - as always and excellent start.\n\n\n\n\n\n\n\n\nFrom this it is hard to judge if the data is normally distributed. We switch to the grammar of graphics for more flexibility. Of course, there is a package for plotting qq plots, qqplotr.\n\n\n\n\n\n\n\n\nStill hard to judge if the data is normally distributed. We nee the qq line and the confidence band.\n\n\n\n\n\n\n\n\n\n\nqq plot (normal data with mean and sd)\nHere you can see how a qq plot looks for data with a mean and sd\n\n\n\n\n\n\n\n\n\n\nqq plot for non normal data\nBelow you can see how a qq plot looks for non normally distributed data\n\n\n\n\n\n\n\n\nBut a qq plot can also work for non normally distributed data, if the distribution is adjusted in the code (unif).",
     "crumbs": [
       "Data Quality",
       "data distributions"

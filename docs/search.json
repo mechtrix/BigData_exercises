@@ -18,57 +18,20 @@
     "text": "This is the landing page for the Big Data exercises taught by Prof. Dr. Tim Weber at the DIT. This is a more or less static page, for admin stuff got to ilearn. The exercises are designed to run in the browser of your choice. Feel free to setup R on your local machine, but do not expect support from us. You can download R here. You can download RStudio (the free IDE for R) here. If you want to get things going, start here. Packages forR can be downloaded from CRAN, but this should be done from within R. If you want to contribute or get packages that are not hosted on CRAN, you can setup a Github account, but this is purely optional.\n\nGet started\nData sources\nData quality\n\n\n\n\nopenAI prompt: give me a picture about Big Data"
   },
   {
-    "objectID": "data_sources.html",
-    "href": "data_sources.html",
-    "title": "Data Sources",
+    "objectID": "gage_rr.html",
+    "href": "gage_rr.html",
+    "title": "Gage R&R",
     "section": "",
-    "text": "For BigData we need - Data. There are many sources out there, we will start working with a couple of them.\n\ndata shipped with R\ncsv files\nCallilng API’s\nDatabases\nweb scraping\n\n\n\n\nopenAI prompt: give me a picture about Data Sources",
-    "crumbs": [
-      "Data Sources"
-    ]
+    "text": "lecture data\nFirst, we graphically explore the data as done in the lecture.\n\n\n\n\n\n\n\n\nNext, lets build the first ANOVA model!\n\n\n\n\n\n\n\n\nAt the heart of the ANOVA we find the function lm(). Find out what lm() does.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nUse the ?.\n\n\n\n\nSo, let’s do some lm()ing\n\n\n\n\n\n\n\n\nWhat do you think ~ is?\nWhat do you think + is?\nWhat do you think * is?\nInspect the model!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nUse the print().\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nUse the head().\n\n\n\n\n\n\n\n\n\n\n\nHint 3\n\n\n\n\n\nUse the str().\n\n\n\n\nYou can also get the lm coefficients using coef()\n\n\n\n\n\n\n\n\nThe next question is, if the model and its terms is significant. This can be checked using the summary() function\n\n\n\n\n\n\n\n\nApparently, none of terms are significant? But what does that mean? Apparently, it does not matter which of the batteries we measure by which voltmeter. But we want the measurement systems to detect changes. Theese systems are probably not up for the task. You can also see that when using the prepared Gage R&R function from the SixSigma package."
   },
   {
-    "objectID": "data_distributions.html",
-    "href": "data_distributions.html",
-    "title": "Data distributions",
+    "objectID": "data_quality.html",
+    "href": "data_quality.html",
+    "title": "Data Quality",
     "section": "",
-    "text": "qq plot (normal data)\nA qq plot compares theoretical quantiles to the actual sample quantiles. First, we need to draw some random numbers\n\n\n\n\n\n\n\n\nThen, we create the simplest form of qq plot - the points. This is made with Base R graphics - as always and excellent start.\n\n\n\n\n\n\n\n\nFrom this it is hard to judge if the data is normally distributed. We switch to the grammar of graphics for more flexibility. Of course, there is a package for plotting qq plots, qqplotr.\n\n\n\n\n\n\n\n\nStill hard to judge if the data is normally distributed. We nee the qq line and the confidence band.\n\n\n\n\n\n\n\n\n\n\nqq plot (normal data with mean and sd)\nHere you can see how a qq plot looks for data with a mean and sd\n\n\n\n\n\n\n\n\n\n\nqq plot for non normal data\nBelow you can see how a qq plot looks for non normally distributed data\n\n\n\n\n\n\n\n\nBut a qq plot can also work for non normally distributed data, if the distribution is adjusted in the code (unif).",
+    "text": "Data Quality is hard\n\ncheck data distributions\n\n\n\n\nopenAI prompt: give me a picture about Data Quality",
     "crumbs": [
-      "Data Quality",
-      "data distributions"
-    ]
-  },
-  {
-    "objectID": "csv_files.html",
-    "href": "csv_files.html",
-    "title": "csv files",
-    "section": "",
-    "text": "Reading a csv is fairly simple, we just need the file path. Lucky for you this has been prepared, the file was already downloaded to the Virtual File System (VFS) that webR uses. Classically, we can use the read.csv() function from baseR. It is not as convenient, but you do not need to install or download any package to work with it. Check out the variable content using the commands from data shipped with R!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the tidyverse we also have the readr package. It give more flexibility, for example specifiying columns. We do not need to care about that now, but it is good to know.",
-    "crumbs": [
-      "Data Sources",
-      "csv files"
-    ]
-  },
-  {
-    "objectID": "csv_files.html#dplyr",
-    "href": "csv_files.html#dplyr",
-    "title": "csv files",
-    "section": "",
-    "text": "In the tidyverse we also have the readr package. It give more flexibility, for example specifiying columns. We do not need to care about that now, but it is good to know.",
-    "crumbs": [
-      "Data Sources",
-      "csv files"
-    ]
-  },
-  {
-    "objectID": "API_data.html",
-    "href": "API_data.html",
-    "title": "Calling API’s",
-    "section": "",
-    "text": "loading data\nBelow you can try to get data from an API. This is not yet possible using webR for technical and security reasons. In theory, it would go like this:\nThis is the Give Food API at givefood.org.uk and shall give us a brief introduction on how to work with API’s. We need two packages: httr and jsonlite. We are pulling data from a data source that does not need a key foodbank.\n\nlibrary(httr)\nlibrary(jsonlite)\n\nfoodbank &lt;- httr::GET(\"https://www.givefood.org.uk/api/2/foodbanks/\")\n\nfoodbankcontent &lt;- httr::content(foodbank, as = \"text\")\n\nfoodbankJSON &lt;- jsonlite::fromJSON(foodbankcontent)\n\nResponse [https://www.givefood.org.uk/api/2/foodbanks/]\n  Date: 2024-10-05 07:50\n  Status: 200\n  Content-Type: application/json\n  Size: 1.28 MB\n[\n  {\n    \"name\": \"Lapford Food Bank\",\n    \"alt_name\": null,\n    \"slug\": \"lapford\",\n    \"phone\": \"0136383788\",\n    \"secondary_phone\": null,\n    \"email\": \"foodbank@lapfordcc.org.uk\",\n    \"address\": \"Victory Hall\\r\\nLapford\\r\\nDevon\\r\\nEX17 6PZ\",\n    \"postcode\": \"EX17 6PZ\",\n...\nBut we can “fake” an API call, just to be able to play around a little with json files. For this we will download the data that is provided by the API as a csv and re-read it into R.\n\n\n\n\n\n\n\n\nprocessing data\nOk, so now we have data, but what can we do with it? Below is some code where we count the foodbanks according to region in the UK. The count() command is an abbreviation of the group_by() command and the summarise() command. It is quicker, but not as versatile. We use it here, to get some quick results.\n\n\n\n\n\n\n\n\nplotting data\nWe then add a ordered barplot so show the counts. Piece o’ cake!\n\n\n\n\n\n\nNotice that we have ordered the x-axis to start with the highest bar. This makes barplots much more readable as if we would not have done this.",
-    "crumbs": [
-      "Data Sources",
-      "Calling API's"
+      "Data Quality"
     ]
   },
   {
@@ -94,13 +57,57 @@
     ]
   },
   {
-    "objectID": "data_quality.html",
-    "href": "data_quality.html",
-    "title": "Data Quality",
+    "objectID": "API_data.html",
+    "href": "API_data.html",
+    "title": "Calling API’s",
     "section": "",
-    "text": "Data Quality is hard\n\ncheck data distributions\n\n\n\n\nopenAI prompt: give me a picture about Data Quality",
+    "text": "loading data\nBelow you can try to get data from an API. This is not yet possible using webR for technical and security reasons. In theory, it would go like this:\nThis is the Give Food API at givefood.org.uk and shall give us a brief introduction on how to work with API’s. We need two packages: httr and jsonlite. We are pulling data from a data source that does not need a key foodbank.\n\nlibrary(httr)\nlibrary(jsonlite)\n\nfoodbank &lt;- httr::GET(\"https://www.givefood.org.uk/api/2/foodbanks/\")\n\nfoodbankcontent &lt;- httr::content(foodbank, as = \"text\")\n\nfoodbankJSON &lt;- jsonlite::fromJSON(foodbankcontent)\n\nResponse [https://www.givefood.org.uk/api/2/foodbanks/]\n  Date: 2024-10-05 07:50\n  Status: 200\n  Content-Type: application/json\n  Size: 1.28 MB\n[\n  {\n    \"name\": \"Lapford Food Bank\",\n    \"alt_name\": null,\n    \"slug\": \"lapford\",\n    \"phone\": \"0136383788\",\n    \"secondary_phone\": null,\n    \"email\": \"foodbank@lapfordcc.org.uk\",\n    \"address\": \"Victory Hall\\r\\nLapford\\r\\nDevon\\r\\nEX17 6PZ\",\n    \"postcode\": \"EX17 6PZ\",\n...\nBut we can “fake” an API call, just to be able to play around a little with json files. For this we will download the data that is provided by the API as a csv and re-read it into R.\n\n\n\n\n\n\n\n\nprocessing data\nOk, so now we have data, but what can we do with it? Below is some code where we count the foodbanks according to region in the UK. The count() command is an abbreviation of the group_by() command and the summarise() command. It is quicker, but not as versatile. We use it here, to get some quick results.\n\n\n\n\n\n\n\n\nplotting data\nWe then add a ordered barplot so show the counts. Piece o’ cake!\n\n\n\n\n\n\nNotice that we have ordered the x-axis to start with the highest bar. This makes barplots much more readable as if we would not have done this.",
     "crumbs": [
-      "Data Quality"
+      "Data Sources",
+      "Calling API's"
+    ]
+  },
+  {
+    "objectID": "csv_files.html",
+    "href": "csv_files.html",
+    "title": "csv files",
+    "section": "",
+    "text": "Reading a csv is fairly simple, we just need the file path. Lucky for you this has been prepared, the file was already downloaded to the Virtual File System (VFS) that webR uses. Classically, we can use the read.csv() function from baseR. It is not as convenient, but you do not need to install or download any package to work with it. Check out the variable content using the commands from data shipped with R!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn the tidyverse we also have the readr package. It give more flexibility, for example specifiying columns. We do not need to care about that now, but it is good to know.",
+    "crumbs": [
+      "Data Sources",
+      "csv files"
+    ]
+  },
+  {
+    "objectID": "csv_files.html#dplyr",
+    "href": "csv_files.html#dplyr",
+    "title": "csv files",
+    "section": "",
+    "text": "In the tidyverse we also have the readr package. It give more flexibility, for example specifiying columns. We do not need to care about that now, but it is good to know.",
+    "crumbs": [
+      "Data Sources",
+      "csv files"
+    ]
+  },
+  {
+    "objectID": "data_distributions.html",
+    "href": "data_distributions.html",
+    "title": "Data distributions",
+    "section": "",
+    "text": "qq plot (normal data)\nA qq plot compares theoretical quantiles to the actual sample quantiles. First, we need to draw some random numbers\n\n\n\n\n\n\n\n\nThen, we create the simplest form of qq plot - the points. This is made with Base R graphics - as always and excellent start.\n\n\n\n\n\n\n\n\nFrom this it is hard to judge if the data is normally distributed. We switch to the grammar of graphics for more flexibility. Of course, there is a package for plotting qq plots, qqplotr.\n\n\n\n\n\n\n\n\nStill hard to judge if the data is normally distributed. We nee the qq line and the confidence band.\n\n\n\n\n\n\n\n\n\n\nqq plot (normal data with mean and sd)\nHere you can see how a qq plot looks for data with a mean and sd\n\n\n\n\n\n\n\n\n\n\nqq plot for non normal data\nBelow you can see how a qq plot looks for non normally distributed data\n\n\n\n\n\n\n\n\nBut a qq plot can also work for non normally distributed data, if the distribution is adjusted in the code (unif).",
+    "crumbs": [
+      "Data Quality",
+      "data distributions"
+    ]
+  },
+  {
+    "objectID": "data_sources.html",
+    "href": "data_sources.html",
+    "title": "Data Sources",
+    "section": "",
+    "text": "For BigData we need - Data. There are many sources out there, we will start working with a couple of them.\n\ndata shipped with R\ncsv files\nCallilng API’s\nDatabases\nweb scraping\n\n\n\n\nopenAI prompt: give me a picture about Data Sources",
+    "crumbs": [
+      "Data Sources"
     ]
   },
   {

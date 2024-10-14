@@ -1,0 +1,154 @@
+---
+title: "Gage R&R"
+format: live-html
+engine: knitr
+webr:
+    packages:
+      - dplyr
+      - ggplot2
+      - qqplotr
+      - SixSigma
+      - ggh4x
+editor_options: 
+  chunk_output_type: console
+---
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+# lecture data
+
+First, we graphically explore the data as done in the lecture.
+
+```{webr}
+
+data("ss.data.batteries")
+
+ss.data.batteries %>% 
+  ggplot(
+    aes(
+      x = run,  
+      y = voltage
+      )
+    ) +
+  geom_point(
+  )+
+  geom_line(
+    aes(group = 1)
+  )+
+  facet_nested(
+    ~battery+voltmeter,
+    labeller = label_both
+  )+
+  theme_bw(base_size = 20)+
+  theme(
+    legend.position = "bottom"
+  )
+
+```
+
+Next, lets build the first ANOVA model!
+
+```{webr}
+anova(lm(voltage ~ battery + voltmeter + battery * voltmeter, 
+         data = ss.data.batteries))
+```
+
+At the heart of the ANOVA we find the function `lm()`.
+Find out what `lm()` does.
+
+```{webr}
+#| exercise: gagerr_ex_1
+
+
+```
+
+::: { .hint exercise="gagerr_ex_1"}
+::: { .callout-note collapse="false"}
+## Hint 1
+
+Use the `?`.
+
+:::
+:::
+
+So, let's do some `lm()`ing
+
+```{webr}
+model <- lm(voltage ~ battery + voltmeter + battery * voltmeter,data = ss.data.batteries)
+```
+
+What do you think `~` is?
+
+What do you think `+` is?
+
+What do you think `*` is?
+
+Inspect the model!
+
+
+```{webr}
+#| exercise: gagerr_ex_2
+
+
+```
+
+::: { .hint exercise="gagerr_ex_2"}
+::: { .callout-note collapse="false"}
+## Hint 1
+
+Use the `print()`.
+
+:::
+:::
+
+::: { .hint exercise="gagerr_ex_2"}
+::: { .callout-note collapse="false"}
+## Hint 2
+
+Use the `head()`.
+
+:::
+:::
+
+::: { .hint exercise="gagerr_ex_2"}
+::: { .callout-note collapse="false"}
+## Hint 3
+
+Use the `str()`.
+
+:::
+:::
+
+You can also get the lm coefficients using `coef()`
+
+```{webr}
+coef(model)
+
+coefficients(model)
+```
+
+
+The next question is, if the model and its terms is *significant*.
+This can be checked using the `summary()` function
+
+```{webr}
+
+summary(model)
+
+```
+
+Apparently, none of terms are significant?
+But what does that mean?
+Apparently, it does not matter which of the batteries we measure by which voltmeter.
+But we want the measurement systems to detect changes.
+Theese systems are probably not up for the task.
+You can also see that when using the prepared *Gage R&R* function from the `SixSigma` package.
+
+```{webr}
+
+
+ss.rr(var = voltage, part = battery,appr = voltmeter,data = ss.data.batteries,main = "Six Sigma Gage R&R Measure",sub = "Batteries Project MSA",print_plot = TRUE,lsl = 1, usl = 2)
+
+```
+
+
+

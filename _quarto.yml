@@ -28,6 +28,8 @@ website:
         contents: 
           - text: "data distributions"
             href: data_distributions.qmd
+          - text: "Gage R&R"
+            href: gage_rr.qmd
   page-footer: "Copyright 2024, Prof. Dr. Tim Weber" 
 
 format:

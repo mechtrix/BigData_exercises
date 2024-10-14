@@ -22,7 +22,11 @@
     "href": "gage_rr.html",
     "title": "Gage R&R",
     "section": "",
-    "text": "lecture data\nFirst, we graphically explore the data as done in the lecture.\n\n\n\n\n\n\n\n\nNext, lets build the first ANOVA model!\n\n\n\n\n\n\n\n\nAt the heart of the ANOVA we find the function lm(). Find out what lm() does.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nUse the ?.\n\n\n\n\nSo, let’s do some lm()ing\n\n\n\n\n\n\n\n\nWhat do you think ~ is?\nWhat do you think + is?\nWhat do you think * is?\nInspect the model!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nUse the print().\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nUse the head().\n\n\n\n\n\n\n\n\n\n\n\nHint 3\n\n\n\n\n\nUse the str().\n\n\n\n\nYou can also get the lm coefficients using coef()\n\n\n\n\n\n\n\n\nThe next question is, if the model and its terms is significant. This can be checked using the summary() function\n\n\n\n\n\n\n\n\nApparently, none of terms are significant? But what does that mean? Apparently, it does not matter which of the batteries we measure by which voltmeter. But we want the measurement systems to detect changes. Theese systems are probably not up for the task. You can also see that when using the prepared Gage R&R function from the SixSigma package."
+    "text": "lecture data\nFirst, we graphically explore the data as done in the lecture.\n\n\n\n\n\n\n\n\nNext, lets build the first ANOVA model!\n\n\n\n\n\n\n\n\nAt the heart of the ANOVA we find the function lm(). Find out what lm() does.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nUse the ?.\n\n\n\n\nSo, let’s do some lm()ing\n\n\n\n\n\n\n\n\nWhat do you think ~ is?\nWhat do you think + is?\nWhat do you think * is?\nInspect the model!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint 1\n\n\n\n\n\nUse the print().\n\n\n\n\n\n\n\n\n\n\n\nHint 2\n\n\n\n\n\nUse the head().\n\n\n\n\n\n\n\n\n\n\n\nHint 3\n\n\n\n\n\nUse the str().\n\n\n\n\nYou can also get the lm coefficients using coef()\n\n\n\n\n\n\n\n\nThe next question is, if the model and its terms is significant. This can be checked using the summary() function\n\n\n\n\n\n\n\n\nApparently, none of terms are significant? But what does that mean? Apparently, it does not matter which of the batteries we measure by which voltmeter. But we want the measurement systems to detect changes. Theese systems are probably not up for the task. You can also see that when using the prepared Gage R&R function from the SixSigma package.",
+    "crumbs": [
+      "Data Quality",
+      "Gage R&R"
+    ]
   },
   {
     "objectID": "data_quality.html",

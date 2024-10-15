@@ -144,7 +144,7 @@ Theese systems are probably not up for the task.
 You can also see that when using the prepared *Gage R&R* function from the `SixSigma` package.
 
 ```{webr}
-
+#| fig-height: 5
 
 ss.rr(var = voltage, part = battery,appr = voltmeter,data = ss.data.batteries,main = "Six Sigma Gage R&R Measure",sub = "Batteries Project MSA",print_plot = TRUE,lsl = 1, usl = 2)
 

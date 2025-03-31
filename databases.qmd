@@ -53,7 +53,7 @@ Use the `glimpse()` command.
 glimpse(mtcars)
 ```
 :::
-:::
+::: |> 
 
 ::: { .hint exercise="ex_2"}
 ::: { .callout-note collapse="false"}
